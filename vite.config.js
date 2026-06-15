@@ -7,27 +7,30 @@ export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
-    VitePWA({
-      registerType: 'autoUpdate',
-      manifest: {
-        name: 'Nour Al Mustafa',
-        short_name: 'Nour',
-        theme_color: '#ffffff',
-        background_color: '#ffffff',
-        display: 'standalone',
-        icons: [
-          {
-            src: '/icon-192.png',
-            sizes: '192x192',
-            type: 'image/png',
-          },
-          {
-            src: '/icon-512.png',
-            sizes: '512x512',
-            type: 'image/png',
-          },
-        ],
+VitePWA({
+  registerType: 'autoUpdate',
+  includeAssets: ['icon-192.png', 'icon-512.png'],
+  manifest: {
+    name: 'Nour Al Mustafa',
+    short_name: 'Nour',
+    start_url: '/',
+    scope: '/',
+    display: 'standalone',
+    theme_color: '#ffffff',
+    background_color: '#ffffff',
+    icons: [
+      {
+        src: '/icon-192.png',
+        sizes: '192x192',
+        type: 'image/png',
       },
-    }),
+      {
+        src: '/icon-512.png',
+        sizes: '512x512',
+        type: 'image/png',
+      },
+    ],
+  },
+})
   ],
 })

@@ -12,7 +12,7 @@ VitePWA({
   includeAssets: ['icon-192.png', 'icon-512.png'],
   manifest: {
     name: 'Nour Al Mustafa',
-    short_name: 'Nour',
+    short_name: 'المصطفى',
     start_url: '/',
     scope: '/',
     display: 'standalone',
